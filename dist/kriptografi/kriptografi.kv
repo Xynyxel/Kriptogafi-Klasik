@@ -1,0 +1,397 @@
+WindowManager:
+    MainWindow:
+    Algortima1Window:
+    Algortima2Window:
+    Algortima3Window:
+    Algortima4Window:
+    Algortima5Window:
+    Algortima6Window:
+
+<MainWindow>:
+    name: "main"
+
+    GridLayout:
+        cols:2
+
+        Button:
+            text: "Reverse Cipher"
+            on_press:
+                app.root.current = "algoritma1"
+                root.manager.transition.direction = "left"
+        Button:
+            text: "VIGENÈRE Cipher"
+            on_press:
+                app.root.current = "algoritma2"
+                root.manager.transition.direction = "left"
+        Button:
+            text: "Affine Cipher"
+            on_press:
+                app.root.current = "algoritma3"
+                root.manager.transition.direction = "left"
+        Button:
+            text: "Substitution Cipher"
+            on_press:
+                app.root.current = "algoritma4"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "Atbash Cipher"
+            on_press:
+                app.root.current = "algoritma5"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "Baconian Cipher"
+            on_press:
+                app.root.current = "algoritma6"
+                root.manager.transition.direction = "left"
+                
+
+
+<Algortima1Window>:
+    name: "algoritma1"
+    data: data
+    hasilEncode: hasilEncode
+    dataEncode: dataEncode
+    hasilDecode: hasilDecode
+    
+    GridLayout:
+        cols: 4
+
+        Label:
+            text: "Plain Text : "
+
+        TextInput:
+            id: data
+            multiline: False
+
+        Button:
+            text: "Chiper Text :"
+            on_press: 
+                root.encodeData()
+
+        TextInput:
+            id:hasilEncode
+            text: "Enkripsi"
+
+        Label:
+            text: "Chiper Text :"
+
+        TextInput:
+            id: dataEncode
+
+        Button:
+            text: "Plain Text"
+            on_press: 
+                root.decodeData()
+
+        TextInput:
+            id: hasilDecode
+            text: "Dekripsi"
+
+        Button:
+            text: "Back"
+            on_press: 
+                root.manager.transition.direction = 'right'
+                root.manager.current = "main"
+
+<Algortima2Window>:
+    name: "algoritma2"
+    data: data
+    hasilEncode: hasilEncode
+    kunci: kunci
+    kunciEncode: kunciEncode
+    dataEncode: dataEncode
+    hasilDecode: hasilDecode
+    
+    GridLayout:
+        cols: 6
+
+        Label:
+            text: "Plain Text : "
+
+        TextInput:
+            id: data
+            multiline: False
+
+        Label:
+            text: "Kunci : "
+
+        TextInput:
+            id: kunci
+            multiline: False
+            
+        Button:
+            text: "Chiper Text :"
+            on_press: 
+                root.encodeData()
+
+        TextInput:
+            id:hasilEncode
+            text: "Enkripsi"
+
+        Label:
+            text: "Chiper Text :"
+
+        TextInput:
+            id: dataEncode
+
+        Label:
+            text: "Kunci : "
+
+        TextInput:
+            id: kunciEncode
+            multiline: False
+
+        Button:
+            text: "Plain Text"
+            on_press: 
+                root.decodeData()
+
+        TextInput:
+            id: hasilDecode
+            text: "Dekripsi"
+
+        Button:
+            text: "Back"
+            on_press: 
+                root.manager.transition.direction = 'right'
+                root.manager.current = "main"
+
+<Algortima3Window>:
+    name: "algoritma3"
+
+    data: data
+    hasilEncode: hasilEncode
+    kunci: kunci
+    kunci2: kunci2
+    kunciEncode: kunciEncode
+    kunciEncode2: kunciEncode2
+    dataEncode: dataEncode
+    hasilDecode: hasilDecode
+    
+    GridLayout:
+        cols: 8
+
+        Label:
+            text: "Plain Text : "
+
+        TextInput:
+            id: data
+            multiline: False
+
+        Label:
+            text: "Kunci 1: "
+
+        TextInput:
+            id: kunci
+            multiline: False
+
+        Label:
+            text: "Kunci 2: "
+
+        TextInput:
+            id: kunci2
+            multiline: False
+            
+        Button:
+            text: "Chiper Text :"
+            on_press: 
+                root.encodeData()
+
+        TextInput:
+            id:hasilEncode
+            text: "Enkripsi"
+
+        Label:
+            text: "Chiper Text :"
+
+        TextInput:
+            id: dataEncode
+
+        Label:
+            text: "Kunci 1 : "
+
+        TextInput:
+            id: kunciEncode
+            multiline: False
+
+        Label:
+            text: "Kunci 2 : "
+
+        TextInput:
+            id: kunciEncode2
+            multiline: False
+
+        Button:
+            text: "Plain Text"
+            on_press: 
+                root.decodeData()
+
+        TextInput:
+            id: hasilDecode
+            text: "Dekripsi"
+
+        Button:
+            text: "Back"
+            on_press: 
+                root.manager.transition.direction = 'right'
+                root.manager.current = "main"
+
+<Algortima4Window>:
+    name: "algoritma4"
+
+    data: data
+    hasilEncode: hasilEncode
+    kunci: kunci
+    kunciEncode: kunciEncode
+    dataEncode: dataEncode
+    hasilDecode: hasilDecode
+    
+    GridLayout:
+        cols: 6
+
+        Label:
+            text: "Plain Text : "
+
+        TextInput:
+            id: data
+            multiline: False
+
+        Label:
+            text: "Kunci : "
+
+        TextInput:
+            id: kunci
+            multiline: False
+            
+        Button:
+            text: "Chiper Text :"
+            on_press: 
+                root.encodeData()
+
+        TextInput:
+            id:hasilEncode
+            text: "Enkripsi"
+
+        Label:
+            text: "Chiper Text :"
+
+        TextInput:
+            id: dataEncode
+
+        Label:
+            text: "Kunci : "
+
+        TextInput:
+            id: kunciEncode
+            multiline: False
+
+        Button:
+            text: "Plain Text"
+            on_press: 
+                root.decodeData()
+
+        TextInput:
+            id: hasilDecode
+            text: "Dekripsi"
+
+        Button:
+            text: "Back"
+            on_press: 
+                root.manager.transition.direction = 'right'
+                root.manager.current = "main"
+
+<Algortima5Window>:
+    name: "algoritma5"
+    data: data
+    hasilEncode: hasilEncode
+    dataEncode: dataEncode
+    hasilDecode: hasilDecode
+    
+    GridLayout:
+        cols: 4
+
+        Label:
+            text: "Plain Text : "
+
+        TextInput:
+            id: data
+            multiline: False
+
+        Button:
+            text: "Chiper Text :"
+            on_press: 
+                root.encodeData()
+
+        TextInput:
+            id:hasilEncode
+            text: "Enkripsi"
+
+        Label:
+            text: "Chiper Text :"
+
+        TextInput:
+            id: dataEncode
+
+        Button:
+            text: "Plain Text"
+            on_press: 
+                root.decodeData()
+
+        TextInput:
+            id: hasilDecode
+            text: "Dekripsi"
+
+        Button:
+            text: "Back"
+            on_press: 
+                root.manager.transition.direction = 'right'
+                root.manager.current = "main"
+
+<Algortima6Window>:
+    name: "algoritma6"
+    data: data
+    hasilEncode: hasilEncode
+    dataEncode: dataEncode
+    hasilDecode: hasilDecode
+    
+    GridLayout:
+        cols: 4
+
+        Label:
+            text: "Plain Text : "
+
+        TextInput:
+            id: data
+            multiline: False
+
+        Button:
+            text: "Chiper Text :"
+            on_press: 
+                root.encodeData()
+
+        TextInput:
+            id:hasilEncode
+            text: "Enkripsi"
+
+        Label:
+            text: "Chiper Text :"
+
+        TextInput:
+            id: dataEncode
+
+        Button:
+            text: "Plain Text"
+            on_press: 
+                root.decodeData()
+
+        TextInput:
+            id: hasilDecode
+            text: "Dekripsi"
+
+        Button:
+            text: "Back"
+            on_press: 
+                root.manager.transition.direction = 'right'
+                root.manager.current = "main"

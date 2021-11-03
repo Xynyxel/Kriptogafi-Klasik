@@ -1,0 +1,11 @@
+https://www.javatpoint.com/kivy
+
+https://www.youtube.com/watch?v=NEko7jWYKiE
+
+https://www.geeksforgeeks.org/substitution-cipher/
+
+https://www.geeksforgeeks.org/implementing-atbash-cipher/
+
+https://www.geeksforgeeks.org/baconian-cipher/
+
+https://www.geeksforgeeks.org/implementation-affine-cipher/

@@ -1,0 +1,131 @@
+#: import FadeTransition kivy.uix.screenmanager
+<WindowManager>:
+    Screen:
+        name: "Main"
+        MDScreen:
+            md_bg_color:56/255,40/255,81/255,1
+            MDBoxLayout:
+                orientation:"vertical"
+                md_bg_color: app.theme_cls.primary_color  
+                size: root.width, root.height  
+                MDLabel:
+                    text:"simulasi kriptografi"
+                    font_style:"H4"
+                    halign:'center'
+                            
+                MDGridLayout:
+                    cols:2
+                    md_bg_color: app.theme_cls.primary_color    
+                    halign:'center'
+                   
+                    MDFillRoundFlatIconButton:
+                        icon: "key"
+                        text: "Algoritma1"
+                        on_press: 
+                            root.transition.direction = 'left'
+                            root.current = "Algoritma1"
+
+                    MDFillRoundFlatIconButton:
+                        icon: "key"
+                        text: "Algoritma2"
+                        on_release: root.current = "Algoritma2"
+                    MDFillRoundFlatIconButton:
+                        icon: "key"
+                        text: "Algoritma3"
+                        on_release: root.current = "Algoritma3"
+                    MDFillRoundFlatIconButton:
+                        icon: "key"
+                        text: "Algoritma4"
+                        on_release: root.current = "Algoritma4"
+                    MDFillRoundFlatIconButton:
+                        icon: "key"
+                        text: "Algoritma5"
+                        on_release: root.current = "Algoritma5"
+                    MDFillRoundFlatIconButton:
+                        icon: "key"
+                        text: "Algoritma6"
+                        on_release: root.current = "Algoritma6"
+                    
+                        
+               
+
+
+    Screen:
+        name: "Algoritma1"   
+        dataEncode: dataEncode
+        hasilEncode: hasilEncode
+        encodeBtn: encodeBtn
+        MDGridLayout:
+            cols: 1
+            size: root.width, root.height 
+            MDLabel:
+                text:"simulasi Algoritma1"
+                font_style:"H4"
+                
+            MDTextField:
+                id: dataEncode
+                hint_text: "Masukkan Data yang ingin di encode"
+                helper_text_mode: "on_focus"
+                multiline:False
+
+            MDRaisedButton:
+                id: encodeBtn
+                text: "Encode"
+                on_press: 
+                    root.current = "Main"
+                    root.fungsiEncode()
+                    #hasilEncode.text = dataEncode.text.encode()
+
+            MDLabel:
+                id: hasilEncode
+                text:"Hasil Encode"
+                font_style:"H4"
+
+            MDRaisedButton:
+                text: "Back"
+                on_press: 
+                    root.transition.direction = 'right'
+                    root.current = "Main"
+                
+
+    Screen:
+        name: "Algoritma2" 
+        MDLabel:
+            text:"simulasi Algoritma2"
+            font_style:"H4"
+        MDTextField:
+            hint_text: "Helper text on focus"
+            helper_text: "This will disappear when you click off"
+            helper_text_mode: "on_focus"
+        MDRaisedButton:
+            text: "Back"
+            on_press: 
+                root.transition.direction = 'right'
+                root.current = "Main"
+
+    Screen:
+        name: "Algoritma3" 
+        MDLabel:
+            text:"simulasi Algoritma3"
+            font_style:"H4"
+
+    Screen:
+        name: "Algoritma4" 
+        MDLabel:
+            text:"simulasi Algoritma4"
+            font_style:"H4"
+
+    Screen:
+        name: "Algoritma5"
+        MDLabel:
+            text:"simulasi Algoritma5"
+            font_style:"H4"
+
+    Screen:
+        name: "Algoritma6"    
+        MDLabel:
+            text:"simulasi Algoritma6"
+            font_style:"H4"          
+
+
+

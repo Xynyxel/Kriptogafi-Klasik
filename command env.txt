@@ -1,0 +1,9 @@
+activate virtual environtment
+kivy_venv\Scripts\activate
+
+
+install to exe
+pyinstaller --onefile main.py
+
+['Red', 'Pink', 'Purple', 'DeepPurple', 'Indigo', 'Blue', 'LightBlue', 'Cyan', 'Teal', 
+'Green', 'LightGreen', 'Lime', 'Yellow', 'Amber', 'Orange', 'DeepOrange', 'Brown', 'Gray', 'BlueGray']
